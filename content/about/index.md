@@ -6,4 +6,4 @@ eleventyNavigation:
 ---
 # About Me
 
-I am a person that writes stuff.
+I love to learn and love to create and show people what new wonderful opportunities and businesses exist out there.  After many years in business, I have learned we need to support local businesses and tell local people what services are available.
