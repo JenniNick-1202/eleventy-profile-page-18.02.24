@@ -5,29 +5,103 @@ eleventyNavigation:
   order: 1
 numberOfLatestPostsToShow: 3
 ---
-<img 
-	src="https://cdn.freebiesupply.com/logos/large/2x/heart-logo-png-transparent.png"
-	width="50"
-	alt="heart"/>
+<!--Nav Bar-->
 
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Jenni</h1>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+        <div class="container">
+            <button
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navmenu"
+                >
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
+            <div class="collapse navbar-collapse" id="navmenu">
+             <ul class="navbar-nav ms-auto">
+                 <li class="nav-item">
+                    <a href="#AboutMe" class="nav-link">About Me</a>
+                 </li>
+                <li class="nav-item">
+                 <a href="#myPortfolio" class="nav-link">My Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#myBlog" class="nav-link">My Blog</a>
+                </li>
+             </ul>
+            </div>        
+        </div>
+    </nav>
 
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
-{% endif %}
+	<!--showcase-->
 
-{# List every content page in the project #}
-{#
-<ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
-</ul>
-#}
+<section class="bg-dark text-light p-5 text-center text-sm-start">
+    <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+            <h1>I'm Jenni, a <span class="text-danger">Web Developer</span></h1>
+            <p class="lead my-4">
+            I design and create websites to showcase your business.
+            </p>
+            <button class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#contactMe">          
+                Contact Me...Today  
+            </button>
+            </div>
+            <img 
+                class="img-fluid w-50 d-none d-sm-block p-5 mt-5"
+                src="img/logo-no-background.svg"
+                alt="Jenni Nick Web Developer"
+				width="50">
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+
+<div class="modal fade" 
+        id="contactMe" 
+        tabindex="-1" 
+        aria-labelledby="exampleModalLabel" 
+        aria-hidden="true">
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" 
+                id="contactMe">Contact Me...Today</h1>
+          <button type="button" 
+                    class="btn-close" 
+                    data-bs-dismiss="modal" 
+                    aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <p class="lead">Send me your details to get started</p>
+          <form>
+            <div class="mb-3">
+                <label for="first-name" class="col-form-label"> First Name</label>
+                <input type="text" class="form-control" id="first-name">
+            </div>
+            <div class="mb-3">
+                <label for="last-name" class="col-form-label"> Last Name</label>
+                <input type="text" class="form-control" id="last-name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="col-form-label">Email Address</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="col-form-label">Phone Number</label>
+                <input type="number" class="form-control" id="number">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
