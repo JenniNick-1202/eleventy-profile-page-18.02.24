@@ -78,7 +78,7 @@ numberOfLatestPostsToShow: 3
 
         <div class="modal-body">
           <p class="lead">Send me your details to get started</p>
-          <form>
+          <form netlify name="contactMe" method="POST" data-netlify="true">
             <div class="mb-3">
                 <label for="first-name" class="col-form-label"> First Name</label>
                 <input type="text" class="form-control" id="first-name">
@@ -99,7 +99,7 @@ numberOfLatestPostsToShow: 3
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-primary">Send Email</button>
         </div>
       </div>
     </div>
