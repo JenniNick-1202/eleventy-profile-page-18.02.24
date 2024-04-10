@@ -5,10 +5,25 @@ eleventyNavigation:
   order: 1
 numberOfLatestPostsToShow: 3
 ---
-<!--Nav Bar-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rubik+Scribble&display=swap" rel="stylesheet">
+    <title>My Profile Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <!--navbar-->
 
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
         <div class="container">
+            <a href="#" class="navbar-brand">Jenni Nicholson</a>
             <button
                 class="navbar-toggler" 
                 type="button" 
@@ -21,43 +36,172 @@ numberOfLatestPostsToShow: 3
             <div class="collapse navbar-collapse" id="navmenu">
              <ul class="navbar-nav ms-auto">
                  <li class="nav-item">
-                    <a href="#AboutMe" class="nav-link">About Me</a>
+                    <a href="#aboutMe" class="nav-link">About Me</a>
                  </li>
                 <li class="nav-item">
-                 <a href="#myPortfolio" class="nav-link">My Portfolio</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#myBlog" class="nav-link">My Blog</a>
+                 <a href="#myWork" class="nav-link">My Work</a>
                 </li>
              </ul>
             </div>        
         </div>
     </nav>
-
-	<!--showcase-->
+    
+<!--showcase section-->
 
 <section class="bg-dark text-light p-5 text-center text-sm-start">
     <div class="container">
         <div class="d-sm-flex align-items-center justify-content-between">
             <div>
-            <h1>I'm Jenni, a <span class="text-danger">Web Developer</span></h1>
-            <p class="lead my-4">
-            I design and create websites to showcase your business.
-            </p>
-            <button class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#contactMe">          
-                Contact Me...Today  
+            <h1>Hello,<span class="text-primary">I'm Jenni </span> Web Developer, Artist & Graphic Designer</h1>
+            <p class="my-4">
+                I specialise in creating beautiful, responsive websites and graphics that help sell your business.
+                </p>
+            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactMe">          
+                Contact Me Today
             </button>
             </div>
             <img 
-                class="img-fluid w-50 d-none d-sm-block p-5 mt-5"
-                src="img/logo-no-background.svg"
-                alt="Jenni Nick Web Developer"
-				width="50">
+                class="img-fluid w-50 d-none d-sm-block"
+                src="img/AvatarMaker.png"
+                alt="Jenni Nicholson avatar">
         </div>
     </div>
 </section>
 
-<!-- Modal -->
+<!--my work-->
+
+<section id="aboutMe" class="bg-primary-subtle p-3">
+    <div class="container">
+        <h2 class="aboutMe mb-md-3 text-primary">About Me</h2>
+        <p class="lead"> I love good design, that's pleasing on the eye, and when I recently moved house, I found locating new businesses
+            on the internet a challenge. So I decided to learn web design myself to help others find what they need easily online.
+            I want to make the internet accessible to local businesses, showcasing what is available locally using responsive and beautiful
+            websites. 
+        </p>
+        <h2 class="aboutMeTechnologies mb-md-3 text-primary">Technologies</h2> 
+        <ul class="list-group">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>Bootstrap</li>  
+        </ul>   
+    </div>
+</section>
+
+<!--my work-->
+
+<section id="myWork" class="p-5 bg-dark">
+    <div class="container">
+
+<!--card 1-->
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+            <div class="col">
+              <div class="card h-100 text-center">
+                <img src="img/Tip Calculator.png" class="card-img-top" alt="tipCalculator">
+                <div class="card-body">
+                  <h5 class="card-title">Tip Calculator</h5>
+                  <p class="card-text">One of the first projects I created using Javascript.
+                    This calculator will calculate the tip for you based on the amount of the bill and the percentage of the tip.
+                  </p>
+                </div>
+                <div class="card-footer bg-primary-subtle">
+                  <small class="text-body">February 2024</small>
+                </div>
+              </div>
+            </div>
+
+<!--card 2-->
+
+            <div class="col">
+              <div class="card h-100 text-center">
+                <img src="images/Bootstrap.png" class="card-img-top" alt="Bootstrap">
+                <div class="card-body">
+                  <h5 class="card-title">Bootstrap</h5>
+                  <p class="card-text">Created using the Bootstrap Framework, fully responsive to all screen sizes. 
+                    Easy to navigate and easy to use to showcase Bootstrap at its best.
+                  </p>
+                </div>
+                <div class="card-footer bg-primary-subtle">
+                  <small class="text-body-secondary">February 2024</small>
+                </div>
+              </div>
+            </div>
+
+<!--card 3-->
+
+            <div class="col">
+              <div class="card h-100 text-center">
+                <img src="img/Coffee Menu.png" class="card-img-top" alt="coffeeMenu">
+                <div class="card-body">
+                  <h5 class="card-title">Coffee Menu</h5>
+                  <p class="card-text">My continued learning journey has taught me how to build this. It has an inbuilt switch function, an easy to
+                    update array of coffee drinks, and a responsive design that works on all screen sizes.
+                  </p>
+                </div>
+                <div class="card-footer bg-primary-subtle">
+                  <small class="text-body-secondary">March 24</small>
+                </div>
+              </div>
+            </div>
+<!--card 4-->
+
+<div class="col">
+    <div class="card h-100 text-center">
+      <img src="img/animal Filters.png" class="card-img-top" alt="animalFilters">
+      <div class="card-body">
+        <h5 class="card-title">Animal Filter</h5>
+        <p class="card-text">My latest project using Javascript. This is a simple filter that allows you to filter through images of animals.
+            Both the radio buttons and search feature are fully functional.
+        </p>
+      </div>
+      <div class="card-footer bg-primary-subtle">
+        <small class="text-body-secondary">April 24</small>
+      </div>
+    </div>
+  </div>
+
+<!--card 5-->
+
+<div class="col">
+    <div class="card h-100 text-center">
+      <img src="img/beautiful landscape.png" class="card-img-top" alt="beautifulLandscape">
+      <div class="card-body">
+        <h5 class="card-title">Filey beach</h5>
+        <p class="card-text">A sample of my work incorporating the world around us, using
+            colours that are easy on the eye, an essential for great design that showcases your business
+            to the world.
+        </p>
+      </div>
+      <div class="card-footer bg-primary-subtle">
+        <small class="text-body-secondary">2023</small>
+      </div>
+    </div>
+  </div>
+
+<!--card 6-->
+
+<div class="col">
+    <div class="card h-100 text-center">
+      <img src="img/beautiful sunset.png" class="card-img-top" alt="beautifulLandscape">
+      <div class="card-body">
+        <h5 class="card-title">Sunset Orange</h5>
+        <p class="card-text">Another example of my work, showcasing the different colour palettes used.
+            This can all be showcased in to your designs, drawn from the world around you.
+        </p>
+      </div>
+      <div class="card-footer bg-primary-subtle">
+        <small class="text-body-secondary">2023</small>
+      </div>
+    </div>
+  </div>
+
+        </div>
+    </div>
+</section>
+
+<!--modal-->
 
 <div class="modal fade" 
         id="contactMe" 
@@ -67,9 +211,9 @@ numberOfLatestPostsToShow: 3
 
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header bg-primary-subtle">
           <h1 class="modal-title fs-5" 
-                id="contactMe">Contact Me...Today</h1>
+                id="contactMe">Contact Me Today</h1>
           <button type="button" 
                     class="btn-close" 
                     data-bs-dismiss="modal" 
@@ -77,31 +221,35 @@ numberOfLatestPostsToShow: 3
         </div>
 
         <div class="modal-body">
-          <p class="lead">Send me your details to get started.</p>
-          <form netlify name="contactMe">
+          <p class="lead">If you'd like to know more, contact me.</p>
+          <form>
             <div class="mb-3">
-                <label for="first-name" class="col-form-label"> First Name</label>
-                <input type="text" class="form-control" id="first-name" name="contactMe" required>
+                <label for="your-name" class="col-form-label"> Your Name;</label>
+                <input type="text" class="form-control" id="your-name">
             </div>
             <div class="mb-3">
-                <label for="last-name" class="col-form-label"> Last Name</label>
-                <input type="text" class="form-control" id="last-name" name="contactMe" required>
+                <label for="business-name" class="col-form-label"> Your Business Name;</label>
+                <input type="text" class="form-control" id="business-name">
             </div>
             <div class="mb-3">
-                <label for="email" class="col-form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" name="contactMe" required>
+                <label for="email" class="col-form-label">Email Address;</label>
+                <input type="email" class="form-control" id="email">
             </div>
             <div class="mb-3">
-                <label for="phone" class="col-form-label">Phone Number</label>
-                <input type="text" class="form-control" id="number" name="contactMe" required>
+                <label for="phone" class="col-form-label">Phone Number;</label>
+                <input type="number" class="form-control" id="number">
             </div>
-          </div>
-          <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Submit</button>
           </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send</button>
         </div>
       </div>
     </div>
   </div>
 
+  <!--add form send functionality-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
